@@ -1,12 +1,11 @@
-import { Box } from '@mui/material'
-import React from 'react'
+import { Box, CircularProgress } from "@mui/material";
 
 const Loading = () => {
   return (
-    <Box>
-      <CircularProgress sx= {{ color: "#A01F26", display: "flex", justifyContent: "center"}} />
+    <Box sx={{ display: "flex", justifyContent: "center" }}>
+      <CircularProgress sx={{ color: "#A01F26" }} />
     </Box>
-  )
-}
+  );
+};
 
-export default Loading
+export default Loading;

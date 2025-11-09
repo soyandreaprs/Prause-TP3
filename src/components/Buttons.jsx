@@ -1,9 +1,25 @@
-import { Button } from '@mui/material'
+import { Button } from "@mui/material";
 
-const Buttons = ({text}) => {
+const Buttons = ({ text, onClick }) => {
   return (
-    <Button variant="contained" sx={{ boxShadow: "none", backgroundColor: "#B38E48", color: "#FFFFFF", textDecoration: "none", "&:hover": { backgroundColor: "#A01F26", boxShadow: "none", cursor: "pointer"} }}>{text}</Button>
-  )
-}
+    <Button
+      onClick={onClick}
+      variant="contained"
+      sx={{
+        boxShadow: "none",
+        backgroundColor: "#B38E48",
+        color: "#FFFFFF",
+        textDecoration: "none",
+        "&:hover": {
+          backgroundColor: "#A01F26",
+          boxShadow: "none",
+          cursor: "pointer",
+        },
+      }}
+    >
+      {text}
+    </Button>
+  );
+};
 
-export default Buttons
+export default Buttons;
