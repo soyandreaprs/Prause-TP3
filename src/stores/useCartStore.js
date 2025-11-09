@@ -1,9 +1,11 @@
 import { create } from "zustand";
 
-const useCartStore = () => {
-  return (
-    <div>useCartStore</div>
-  )
-}
+const useCartStore = create((set) => ({
+  items: [],
+  addItem: (item) => set((state) => ({ items: [...state.items, item] })),
+  removeItem: (id) =>
+    set((state) => ({ items: state.items.filter((item) => item.id !== id) })),
+  clear: () => set({ items: [] }),
+}));
 
-export default useCartStore
+export default useCartStore;
